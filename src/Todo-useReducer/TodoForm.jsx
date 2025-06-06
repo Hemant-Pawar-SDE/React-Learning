@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { nanoid } from "nanoid";
 
-function TodoForm({ addTodo }) {
+function TodoForm({ dispatch }) {
   const [title, setTitle] = useState("");
 
   const newTodo = {
@@ -11,9 +12,14 @@ function TodoForm({ addTodo }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    addTodo(newTodo);
+    dispatch({
+      type: "ADD_TODO",
+      payload: newTodo,
+    });
   }
 
+
+  
   return (
     <div onSubmit={handleSubmit}>
       <input
