@@ -6,11 +6,12 @@ import FetchDemo from "./API/Fetch-Example";
 import FetchDemo2 from "./API/Fetch-Search";
 import FetchingDataOnly from "./API/FetchingDataOnly";
 import HandlingFormInputs from "./HandlinFormInputsData";
+import HigherOrderComponent from "./HigherOrderComponent";
 
 function App() {
   return (
     <div>
-      <HandlingFormInputs />
+      <HigherOrderComponent />
     </div>
   );
 }
