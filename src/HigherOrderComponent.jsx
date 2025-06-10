@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//Higher order component Demo
 function HigherOrderComponent() {
   return (
     <div>
