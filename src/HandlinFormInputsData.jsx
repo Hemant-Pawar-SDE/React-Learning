@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//multiple inputs
 function HandlingFormInputs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -114,11 +115,22 @@ function HandlingFormInputs() {
         <h3>Submitted Data:</h3>
         {submitted ? (
           <ul>
-            <li><strong>Name:</strong> {submitted.name}</li>
-            <li><strong>Email:</strong> {submitted.email}</li>
-            <li><strong>Password:</strong> {submitted.password}</li>
-            <li><strong>Gender:</strong> {submitted.gender}</li>
-            <li><strong>Agreed to Terms:</strong> {submitted.agreeToTerms ? "Yes" : "No"}</li>
+            <li>
+              <strong>Name:</strong> {submitted.name}
+            </li>
+            <li>
+              <strong>Email:</strong> {submitted.email}
+            </li>
+            <li>
+              <strong>Password:</strong> {submitted.password}
+            </li>
+            <li>
+              <strong>Gender:</strong> {submitted.gender}
+            </li>
+            <li>
+              <strong>Agreed to Terms:</strong>{" "}
+              {submitted.agreeToTerms ? "Yes" : "No"}
+            </li>
           </ul>
         ) : (
           <p>No submission yet.</p>
