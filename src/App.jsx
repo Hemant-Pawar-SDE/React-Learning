@@ -7,11 +7,12 @@ import FetchDemo2 from "./API/Fetch-Search";
 import FetchingDataOnly from "./API/FetchingDataOnly";
 import HandlingFormInputs from "./HandlinFormInputsData";
 import HigherOrderComponent from "./HigherOrderComponent";
+import EasyApproach2 from "./EasyApproach2";
 
 function App() {
   return (
     <div>
-      <HigherOrderComponent />
+      <EasyApproach2 />
     </div>
   );
 }
