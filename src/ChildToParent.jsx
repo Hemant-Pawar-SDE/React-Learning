@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-function ChildToParent() {
+export default function Parent() {
   const [count, setCount] = useState(0);
-  function increment() {
+
+  function update() {
     setCount((prev) => {
       return prev + 1;
     });
@@ -10,21 +11,20 @@ function ChildToParent() {
 
   return (
     <div>
-      <h2>Count:{count}</h2>
-      <UpdateCount increment={increment} />
+      <h1>count:{count}</h1>
+      <Child update={update} />
     </div>
   );
 }
 
-export default ChildToParent;
-
-function UpdateCount({ increment }) {
-  function handleUpdate() {
-    increment();
+function Child({ update }) {
+  function handleClick() {
+    update();
   }
+
   return (
     <div>
-      <button onClick={handleUpdate}>UPDATE</button>
+      <button onClick={handleClick}> update</button>
     </div>
   );
 }
