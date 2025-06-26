@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Practice() {
+function Radio() {
   const [gender, setGender] = useState("");
   const [value, setValue] = useState("");
 
@@ -41,4 +41,4 @@ function Practice() {
   );
 }
 
-export default Practice;
+export default Radio;
